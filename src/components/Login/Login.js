@@ -31,7 +31,6 @@ const passwordReducer = (prevState, action) => {
       isValid: prevState.value.trim().length > 6,
     };
   }
-  return { value: " ", isValid: false };
 };
 
 const Login = (props) => {
@@ -72,7 +71,7 @@ const Login = (props) => {
     // setEnteredEmail(event.target.value);
     dispatchEmail({ type: "USER_INPUT", val: event.target.value });
 
-    // If u update a state which depends on another state then merging into one state is a good idea, using useReducer is good even though we can two state but useReducer is helpful.
+    // If u update a state which depends on another state then merging into one state is a good idea, using useReducer is good even though we can use two state but useReducer is helpful.
 
     // setFormIsValid(event.target.value.includes("@") && passwordState.isValid);
   };
